@@ -6,10 +6,12 @@ public class CheckPointScript : MonoBehaviour
 {
     public Transform RaceManager;
     private RaceManager _manager;
+    private string myName;
 
     void Awake()
     {
         _manager = GameObject.FindObjectOfType<RaceManager>();
+        myName = this.name;
     }
 
     void OnTriggerEnter()
@@ -17,5 +19,6 @@ public class CheckPointScript : MonoBehaviour
         //Debug.Log("on trigger enter CheckPointScrpt");
 
         _manager.triggerStatus = true;
+        _manager.nameOfActive = int.Parse(myName);
     }
 }

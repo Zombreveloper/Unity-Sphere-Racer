@@ -10,7 +10,8 @@ public class RaceManager : MonoBehaviour
     public Transform checkPointMesh; //Mesh bzw Modell vom aktiven Checkpoint
     private Transform parentOfCheckPoints; //Parent von allen Checkpoints, heißt "AllCheckPoints"
     private int numberOfCheckPoints;
-    private int numberOfActive;
+    private int numberOfActive; //Nummer in RaceManager
+    public int nameOfActive; //Name der Objecte der CheckPointScricpts
     private int checkPointLayer;
     public bool triggerStatus { get; set; }
 
@@ -24,7 +25,7 @@ public class RaceManager : MonoBehaviour
     void Start()
     {
         startRace();
-        triggerStatus = true;
+        triggerStatus = false;
     }
 
     void Update()
@@ -53,11 +54,13 @@ public class RaceManager : MonoBehaviour
     {
         parentOfCheckPoints = GameObject.Find("AllCheckPoints").transform;
         numberOfCheckPoints = parentOfCheckPoints.childCount;
-        numberOfActive = numberOfCheckPoints; //startwert, collider der Ziellinie
+        numberOfActive = 0; //startwert, collider der Ziellinie
     }
 
     void startRace()
     {
+        positionMesh(numberOfActive);
+
         //setzt Auto an StartOrt
         playerCar.position = startPoint.position;
         playerCar.rotation = startPoint.rotation;
@@ -73,15 +76,20 @@ public class RaceManager : MonoBehaviour
     {
         if (triggerStatus)
         {
-            if (numberOfActive == numberOfCheckPoints)
+            //Debug.Log("nameOfActive = " + nameOfActive);
+            //Debug.Log("numberOfActive = " + numberOfActive);
+            if (nameOfActive == numberOfActive)
             {
-                numberOfActive = 0;
-                positionMesh(numberOfActive);
-            }
-            else
-            {
-                numberOfActive++;
-                positionMesh(numberOfActive);
+                if (numberOfActive == numberOfCheckPoints-1)
+                {
+                    numberOfActive = 0;
+                    positionMesh(numberOfActive);
+                }
+                else
+                {
+                    numberOfActive++;
+                    positionMesh(numberOfActive);
+                }
             }
         }
         //bei Trigger numberOfActive++; + positionMesh();

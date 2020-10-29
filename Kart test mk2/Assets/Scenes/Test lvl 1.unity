@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 550083932}
   - component: {fileID: 550083931}
   m_Layer: 10
-  m_Name: 4
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 644765802}
   - component: {fileID: 644765801}
   m_Layer: 10
-  m_Name: 3
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 744410403}
   - component: {fileID: 744410404}
   m_Layer: 10
-  m_Name: 1
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,6 +1618,7 @@ MonoBehaviour:
   playerCar: {fileID: 220591476170517998}
   startPoint: {fileID: 1371555066}
   checkPointMesh: {fileID: 229306982774522020}
+  nameOfActive: 0
 --- !u!4 &1791589979
 Transform:
   m_ObjectHideFlags: 0
@@ -1644,7 +1645,7 @@ GameObject:
   - component: {fileID: 1839063875}
   - component: {fileID: 1839063876}
   m_Layer: 10
-  m_Name: 2
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
