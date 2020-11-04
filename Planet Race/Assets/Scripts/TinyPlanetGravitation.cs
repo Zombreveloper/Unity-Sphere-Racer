@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TinyPlanetGravitation : MonoBehaviour
 {
-    public Rigidbody rbToAttract;
+    public Rigidbody rbToAttract; //Entsprechendes Auto -> Variable die durch Menu vorgegeben werden muss
     public Transform tinyPlanet;
     public float MassOfTinyPlanet = 100000f;
 
