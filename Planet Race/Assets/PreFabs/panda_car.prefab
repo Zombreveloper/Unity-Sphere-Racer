@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8332175076052727799}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4287870524803913462
 GameObject:
@@ -164,16 +164,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 8
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1322351721
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steer: 0
   invertSteer: 0
-  power: 1
+  power: 0
 --- !u!1 &5744214009897351557
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,11 +219,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5744214009897351557}
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.027, y: 0.08, z: -0.092}
+  m_LocalPosition: {x: -0.027, y: 0.176, z: -0.092}
   m_LocalScale: {x: 1.0209376, y: 0.9284339, z: 1.4246601}
   m_Children: []
   m_Father: {fileID: 8332175076052727799}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3766932310804930342
 BoxCollider:
@@ -330,16 +330,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1124009453
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steer: 0
   invertSteer: 0
-  power: 1
+  power: 0
 --- !u!1 &6535198521162425385
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,16 +408,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1405535408
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steer: 1
   invertSteer: 0
-  power: 0
+  power: 1
 --- !u!1 &6718269811957253668
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1.5125, y: 0.64141256, z: 3.7579155}
   m_Children: []
   m_Father: {fileID: 8332175076052727799}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1441113971619490232
 BoxCollider:
@@ -511,7 +511,7 @@ Transform:
   - {fileID: 2352163675130818391}
   - {fileID: 2827129746333885302}
   m_Father: {fileID: 8332175076052727799}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8370903528959623036
 GameObject:
@@ -564,16 +564,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &344528406
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steer: 1
   invertSteer: 0
-  power: 0
+  power: 1
 --- !u!1 &8712782722919837005
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,10 +623,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8758332029909344917}
+  - {fileID: 8370903528923533324}
   - {fileID: 8193526590950065398}
   - {fileID: 7973107818396069383}
   - {fileID: 2052084743583315190}
-  - {fileID: 8370903528923533324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
