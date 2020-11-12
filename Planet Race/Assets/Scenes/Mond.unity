@@ -550,6 +550,75 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1001 &417146373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.383125
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 298.7485
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.31
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0bc322e8042aba4681f4bd30e5088ba,
+        type: 3}
+      propertyPath: m_Name
+      value: flag
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0bc322e8042aba4681f4bd30e5088ba, type: 3}
 --- !u!1 &492928572
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +749,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524484240}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e9395dcf4e08f344eaafe7a6abb1dcc8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1293,7 +1362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234627461}
   - component: {fileID: 1234627462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trigger Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2881851e2a27faf47a7d50436ade48e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCar: {fileID: 0}
+  playerCar: {fileID: 3324231259908134243}
   startPoint: {fileID: 1362576887}
   checkPointMesh: {fileID: 1447223108}
   nameOfActive: 0
@@ -1372,7 +1441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362576886
 GameObject:
@@ -1713,7 +1782,7 @@ Transform:
   m_Children:
   - {fileID: 49224005}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499177444
 GameObject:
@@ -2188,7 +2257,7 @@ Transform:
   - {fileID: 1447223108}
   - {fileID: 1401631590}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880507859
 GameObject:
@@ -2661,7 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649ef839e14bdb44a7f02b6154ce4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 3324231259908134243}
+  centerOfMass: {fileID: 43927456}
   motorTorque: 300
   maxSteer: 20
 --- !u!33 &3220126147558083806
@@ -2680,7 +2749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2695925663547953113}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 320, z: 0}
+  m_LocalPosition: {x: 21.34, y: 302.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 629241131}
