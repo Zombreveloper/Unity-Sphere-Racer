@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/CarCollisionTest2.unity
+- path: Assets/Scenes/BigBlueOcean.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
