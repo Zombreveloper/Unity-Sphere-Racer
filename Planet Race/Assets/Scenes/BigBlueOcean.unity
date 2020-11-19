@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 305087366560a1a4194c7db8d7d6cab1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2335,6 +2335,7 @@ GameObject:
   - component: {fileID: 5285532827223527631}
   - component: {fileID: 4759537730886760241}
   - component: {fileID: 7245424953315527479}
+  - component: {fileID: 2515231067424799860}
   m_Layer: 0
   m_Name: Tracksegment02
   m_TagString: Untagged
@@ -2342,6 +2343,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2515231067424799860
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515231067424799859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4896751754948959390, guid: b7320ed7bee3fd141bbd0f9807cb2011, type: 3}
 --- !u!4 &2536712901692965030
 Transform:
   m_ObjectHideFlags: 0
