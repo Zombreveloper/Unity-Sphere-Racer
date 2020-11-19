@@ -25,7 +25,7 @@ public class CarSelection : MonoBehaviour
         cars[selectedCar].SetActive(true);
     }
 
-    void StartGame() //von MainMenü rufen lassen
+    public void StartGame() //von MainMenü rufen lassen
     {
         PlayerPrefs.SetInt("selectedCar", selectedCar); //speichert Daten, zwischen szenen
         //SceneManager.LoadScene("Mars", LoadSceneMode.Single);

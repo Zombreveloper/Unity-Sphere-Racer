@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene("Mars"); //Testzweck, besser abfrage was der spiler gewählt hat...
 
         //schlechter code: anzahl der Planeten variable, namen sollten dynamisch, nicht total sein
+        /*
         if (currentPlanet == 0)
         {
             //SceneManager.LoadScene("Mond");
@@ -38,7 +39,9 @@ public class MainMenu : MonoBehaviour
         {
             //SceneManager.LoadScene("Bambus");
             Debug.Log("Lade Bambus Szene");
-        }
+        }*/
+
+        SceneManager.LoadScene("GameSceneTest");
     }
 
     public void Quit()

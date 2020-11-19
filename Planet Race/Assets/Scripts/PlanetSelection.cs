@@ -27,12 +27,12 @@ public class PlanetSelection : MonoBehaviour
         planets[selectedPlanet].SetActive(true);
     }
 
-    void StartGame() //von MainMenü rufen lassen
+    public void StartGame() //von MainMenü rufen lassen
     {
-        //PlayerPrefs.SetInt("selectedPlanet", selectedPlanet); //speichert Daten, zwischen szenen
+        PlayerPrefs.SetInt("selectedPlanet", selectedPlanet); //speichert Daten, zwischen szenen
         //SceneManager.LoadScene("Mars", LoadSceneMode.Single);
     }
-
+/*
     void Awake()
     {
         mainMenu = GameObject.FindObjectOfType<MainMenu>();
@@ -41,5 +41,5 @@ public class PlanetSelection : MonoBehaviour
     void Update()
     {
         mainMenu.updateCurrentPlanet(selectedPlanet);
-    }
+    }*/
 }
