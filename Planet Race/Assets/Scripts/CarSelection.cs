@@ -29,7 +29,8 @@ public class CarSelection : MonoBehaviour
     {
         Debug.Log("Name des Autos: " + cars[selectedCar].name);
         //PlayerPrefs.SetInt("selectedCar", selectedCar); //speichert Daten, zwischen szenen
-        PlayerPrefs.SetString("selectedCar", cars[selectedCar].name); //speichert Daten, zwischen szenen
+        PlayerPrefs.SetString("selectedCar", cars[selectedCar].name); //speichert Autonamen zwischen szenen
         //SceneManager.LoadScene("Mars", LoadSceneMode.Single);
+        PlayerPrefs.SetInt("selectedCarNumber", selectedCar); //speicher Autonummer für LoadCar
     }
 }

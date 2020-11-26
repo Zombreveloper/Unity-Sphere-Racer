@@ -7,6 +7,8 @@ public class RaceManager : MonoBehaviour
     public Transform playerCar;
     public Transform startPoint; //leres Object mit korrektem Transform für startendes Auto
 
+    public LoadCar _loadCar;
+
     public Transform checkPointMesh; //Mesh bzw Modell vom aktiven Checkpoint
     private Transform parentOfCheckPoints; //Parent von allen Checkpoints, heißt "AllCheckPoints"
     private int numberOfCheckPoints;
@@ -62,14 +64,12 @@ public class RaceManager : MonoBehaviour
         positionMesh(numberOfActive);
 
         //setzt Auto an StartOrt
-        playerCar.position = startPoint.position;
-        playerCar.rotation = startPoint.rotation;
+        /*playerCar.position = startPoint.position;
+        playerCar.rotation = startPoint.rotation;*/
 
         //Startet counter (3, 2, 1, GO!)
 
         //Startet anschliessend Musik
-
-        //setzt ersten CheckPoint
     }
 
     void updateCheckPoints()
