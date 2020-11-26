@@ -906,8 +906,9 @@ GameObject:
   - component: {fileID: 6005229990469767127}
   - component: {fileID: 5212389541009600000}
   - component: {fileID: 5212389541009600001}
+  - component: {fileID: 6819086438739206100}
   m_Layer: 0
-  m_Name: SpaceKart 1
+  m_Name: SpaceKart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,3 +1011,17 @@ MonoBehaviour:
   centerOfMass: {fileID: 4782309783639712087}
   motorTorque: 400
   maxSteer: 20
+--- !u!114 &6819086438739206100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212389541009600002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassOfTinyPlanet: 100000
+  gravity: 30

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TinyPlanetGravitation : MonoBehaviour
 {
-    public GameObject playerCar;
+    //public GameObject playerCar;
     //private Rigidbody rbToAttract; //Entsprechendes Auto -> Variable die durch Menu vorgegeben werden muss
     private Rigidbody rbToAttract;
 
-    public Transform tinyPlanet;
+    private Transform tinyPlanet;
     public float MassOfTinyPlanet = 100000f;
 
     Vector3 directionOfGravity;
@@ -22,8 +22,10 @@ public class TinyPlanetGravitation : MonoBehaviour
         GameObject playerCar = GameObject.Find(PlayerPrefs.GetString("selectetCar"));
         rbToAttract = playerCar.GetComponent<Rigidbody>();
         */
-        playerCar = GameObject.Find("carClone");
-        rbToAttract = playerCar.GetComponent<Rigidbody>();
+        //playerCar = GameObject.Find("carClone");
+        rbToAttract = GetComponent<Rigidbody>();
+        GameObject planetObj = GameObject.Find(PlayerPrefs.GetString("selectedPlanet"));
+        tinyPlanet = planetObj.transform;
     }
 
     void FixedUpdate()

@@ -15,6 +15,7 @@ public class LoadCar : MonoBehaviour
 
         int selectedCar = PlayerPrefs.GetInt("selectedCarNumber");
         GameObject prefab = carPrefabs[selectedCar];
-        carClone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        //carClone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        carClone = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

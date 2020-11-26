@@ -2322,13 +2322,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371555065}
-  m_LocalRotation: {x: 0.039103948, y: 0.8061335, z: 0.1255171, w: 0.5769446}
+  m_LocalRotation: {x: 0.14177677, y: 0.8155819, z: -0.02084543, w: 0.5606167}
   m_LocalPosition: {x: -14.13, y: 296.14, z: 69.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8227280132945504290}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -9.047001, y: 107.853004, z: 12.152}
+  m_LocalEulerAnglesHint: {x: 11.126, y: 112.188, z: 12.232}
 --- !u!1 &1394669272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,6 +2811,7 @@ MonoBehaviour:
   - {fileID: 5212389541009600002, guid: 182c5d029379c0544a1e03a2ee2ecd23, type: 3}
   - {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
   - {fileID: 0}
+  carClone: {fileID: 0}
 --- !u!1 &1839063873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,29 +3729,13 @@ GameObject:
   - component: {fileID: 6435996804183629580}
   - component: {fileID: 9130405818636364742}
   - component: {fileID: 7328847289442978325}
-  - component: {fileID: 7328847289442978324}
   m_Layer: 0
-  m_Name: Low Poly mars mk3_6 MARS mit STRASSE
+  m_Name: Mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7328847289442978324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7328847289442978323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tinyPlanet: {fileID: 7998000873175584937}
-  MassOfTinyPlanet: 100000
-  gravity: 30
 --- !u!64 &7328847289442978325
 MeshCollider:
   m_ObjectHideFlags: 0

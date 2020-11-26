@@ -1124,6 +1124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0665d0281fc252b49b1ccc4311ac80a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPrefabs: []
+  spawnPoint: {fileID: 0}
 --- !u!4 &1699334835
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791589979}
   - component: {fileID: 1791589978}
+  - component: {fileID: 1791589980}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -1170,6 +1173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCar: {fileID: 1978604765}
   startPoint: {fileID: 1371555066}
+  _loadCar: {fileID: 0}
   checkPointMesh: {fileID: 229306982774522020}
   nameOfActive: 0
 --- !u!4 &1791589979
@@ -1186,6 +1190,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791589980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791589977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c2cfd9add3a324faea832ab74d5da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 7605830009847847884, guid: b2993f1035aa92f4c8ad6f2cc8e9296b, type: 3}
+  - {fileID: 5212389541009600002, guid: 182c5d029379c0544a1e03a2ee2ecd23, type: 3}
+  - {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
+  - {fileID: 0}
+  carClone: {fileID: 0}
 --- !u!1 &1839063873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,14 +1517,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: panda_car
       objectReference: {fileID: 0}
+    - target: {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
---- !u!54 &1978604764 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1114533072526725004, guid: e97b49fedd412764fb678de8edb462a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978604763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1978604765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1114533072526725005, guid: e97b49fedd412764fb678de8edb462a8,
@@ -1580,7 +1601,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b41438c974f0d9a4190e6ef271fc4e04,
         type: 3}
       propertyPath: m_Name
-      value: planet_bambus
+      value: Bambus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b41438c974f0d9a4190e6ef271fc4e04, type: 3}
@@ -1596,22 +1617,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2123320456}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2123320459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123320458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rbToAttract: {fileID: 1978604764}
-  tinyPlanet: {fileID: 2123320457}
-  MassOfTinyPlanet: 100000
-  gravity: 30
 --- !u!64 &2123320460
 MeshCollider:
   m_ObjectHideFlags: 0
