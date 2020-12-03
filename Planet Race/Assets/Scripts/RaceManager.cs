@@ -14,6 +14,7 @@ public class RaceManager : MonoBehaviour
     private int numberOfCheckPoints;
     private int numberOfActive; //Nummer in RaceManager
     public int nameOfActive; //Name der Objecte der CheckPointScricpts
+    private int numberOfResetPos; //letzter von Auto durchfahrener Checkpoint
     private int checkPointLayer;
     public bool triggerStatus { get; set; }
 
@@ -34,6 +35,11 @@ public class RaceManager : MonoBehaviour
     {
         //setzt Mesh auf naechste Checkpoints
         updateCheckPoints();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            resetCar();
+        }
     }
 
 /*
@@ -57,6 +63,7 @@ public class RaceManager : MonoBehaviour
         parentOfCheckPoints = GameObject.Find("AllCheckPoints").transform;
         numberOfCheckPoints = parentOfCheckPoints.childCount;
         numberOfActive = 0; //startwert, collider der Ziellinie
+        numberOfResetPos = 0;
     }
 
     void startRace()
@@ -82,11 +89,13 @@ public class RaceManager : MonoBehaviour
             {
                 if (numberOfActive == numberOfCheckPoints-1)
                 {
+                    numberOfResetPos = numberOfActive;
                     numberOfActive = 0;
                     positionMesh(numberOfActive);
                 }
                 else
                 {
+                    numberOfResetPos = numberOfActive;
                     numberOfActive++;
                     positionMesh(numberOfActive);
                 }
@@ -103,5 +112,11 @@ public class RaceManager : MonoBehaviour
         checkPointMesh.position = posOfPoint.position;
         checkPointMesh.rotation = posOfPoint.rotation;
         triggerStatus = false;
+    }
+
+    public void resetCar()
+    {
+        //position
+        Debug.Log("Reset the Car NOW!!!");
     }
 }

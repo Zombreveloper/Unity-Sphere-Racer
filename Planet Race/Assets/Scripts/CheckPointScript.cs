@@ -14,7 +14,7 @@ public class CheckPointScript : MonoBehaviour
         myName = this.name;
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
         //Debug.Log("on trigger enter CheckPointScrpt");
 
