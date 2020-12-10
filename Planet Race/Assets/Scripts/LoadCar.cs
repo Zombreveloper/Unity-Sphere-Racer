@@ -17,5 +17,7 @@ public class LoadCar : MonoBehaviour
         GameObject prefab = carPrefabs[selectedCar];
         //carClone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         carClone = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+
+        carClone.name = "currentCar"; //um das Auto später wiederzufinden
     }
 }

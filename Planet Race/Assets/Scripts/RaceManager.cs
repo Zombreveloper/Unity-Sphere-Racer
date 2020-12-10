@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class RaceManager : MonoBehaviour
 {
-    public Transform playerCar;
+    public GameObject playerCar;
+    private Rigidbody playerCarRB;
     public Transform startPoint; //leres Object mit korrektem Transform für startendes Auto
+
+    private string planetImOn;
 
     public LoadCar _loadCar;
 
@@ -18,17 +21,24 @@ public class RaceManager : MonoBehaviour
     private int checkPointLayer;
     public bool triggerStatus { get; set; }
 
+    private float startingTime;
+    private float endingTime;
+
 //hauptprogramm
     void Awake()
     {
         setupCheckPoints();
         checkPointLayer = LayerMask.NameToLayer("CheckPoint");
+        planetImOn = PlayerPrefs.GetString("selectedPlanet");
     }
 
     void Start()
     {
         startRace();
         triggerStatus = false;
+
+        playerCar = GameObject.Find("currentCar");
+        playerCarRB =playerCar.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -76,6 +86,9 @@ public class RaceManager : MonoBehaviour
 
         //Startet counter (3, 2, 1, GO!)
 
+        //Nach GO! startzeit nehmen
+        startingTime = Time.time;
+
         //Startet anschliessend Musik
     }
 
@@ -116,7 +129,29 @@ public class RaceManager : MonoBehaviour
 
     public void resetCar()
     {
-        //position
-        Debug.Log("Reset the Car NOW!!!");
+        playerCarRB.velocity = Vector3.zero; //geschwindigkeit auf 0 setzen
+        Transform posOfPoint = parentOfCheckPoints.transform.GetChild (numberOfResetPos); //transform des letzten checkpoints holen
+        playerCar.transform.position = posOfPoint.position + new Vector3(0,3,0);
+        //nich += denn es soll insgesamt auch bei mehrmaligem drücken nur eimal (1) 3 aud die höhe addiert werden
+
+        //weil die CheckPoints alle in unterschiedliche Richtungen gucken... unterschiedliche rotation am ziel
+        if (planetImOn == "Mars")
+        {
+            playerCar.transform.rotation = posOfPoint.rotation * Quaternion.Euler(0, 90, 0); // this adds a 90 degrees Y rotation
+        }
+        else if (planetImOn == "Mond")
+        {
+            playerCar.transform.rotation = posOfPoint.rotation * Quaternion.Euler(0, -90, 0);
+        }
+        else if (planetImOn == "Bambus")
+        {
+            playerCar.transform.rotation = posOfPoint.rotation * Quaternion.Euler(0, 0, 0);
+        }
+        else if (planetImOn == "BigBlueOcean")
+        {
+            playerCar.transform.rotation = posOfPoint.rotation * Quaternion.Euler(0, 0, 0);
+        }
+
+        //Debug.Log("Reset the Car NOW!!!");
     }
 }
