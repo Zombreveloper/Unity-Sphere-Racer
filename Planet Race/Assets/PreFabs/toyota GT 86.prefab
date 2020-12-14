@@ -906,6 +906,7 @@ GameObject:
   - component: {fileID: 8254441057846245913}
   - component: {fileID: 7605830009847847885}
   - component: {fileID: 7605830009847847887}
+  - component: {fileID: 2991572411371449765}
   m_Layer: 8
   m_Name: toyota GT 86
   m_TagString: Untagged
@@ -1010,3 +1011,17 @@ MonoBehaviour:
   centerOfMass: {fileID: 7046220762405833192}
   motorTorque: 500
   maxSteer: 20
+--- !u!114 &2991572411371449765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605830009847847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassOfTinyPlanet: 100000
+  gravity: 30

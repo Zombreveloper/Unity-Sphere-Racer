@@ -5,12 +5,19 @@ using UnityEngine;
 public class LoadCar : MonoBehaviour
 {
     public GameObject[] carPrefabs;
-    public Transform spawnPoint;
+    private Transform spawnPoint;
+    public GameObject carClone;
+    TinyPlanetGravitation _Gravitation;
 
-    void Start()
+    void Awake()
     {
-        int selectedCar = PlayerPrefs.GetInt("selectedCar");
+        spawnPoint = GameObject.Find("StartOrt").transform;
+
+        int selectedCar = PlayerPrefs.GetInt("selectedCarNumber");
         GameObject prefab = carPrefabs[selectedCar];
-        //GameObject clone = Instanciate(prefab, spawnPoint, Quaternion.identity);
+        //carClone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        carClone = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+
+        carClone.name = "currentCar"; //um das Auto später wiederzufinden
     }
 }

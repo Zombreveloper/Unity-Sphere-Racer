@@ -1571,6 +1571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0665d0281fc252b49b1ccc4311ac80a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPrefabs: []
+  spawnPoint: {fileID: 0}
 --- !u!4 &1699334835
 Transform:
   m_ObjectHideFlags: 0
@@ -1596,6 +1598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791589979}
   - component: {fileID: 1791589978}
+  - component: {fileID: 1791589980}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -1617,6 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCar: {fileID: 91159884042842271}
   startPoint: {fileID: 1371555066}
+  _loadCar: {fileID: 0}
   checkPointMesh: {fileID: 229306982774522020}
   nameOfActive: 0
 --- !u!4 &1791589979
@@ -1633,6 +1637,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791589980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791589977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c2cfd9add3a324faea832ab74d5da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 7605830009847847884, guid: b2993f1035aa92f4c8ad6f2cc8e9296b, type: 3}
+  - {fileID: 5212389541009600002, guid: 182c5d029379c0544a1e03a2ee2ecd23, type: 3}
+  - {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
+  - {fileID: 0}
+  carClone: {fileID: 0}
 --- !u!1 &1839063873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &722842870835571238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,30 +2633,13 @@ GameObject:
   - component: {fileID: 7084543558806346814}
   - component: {fileID: 960991190470866240}
   - component: {fileID: 5325979006650631805}
-  - component: {fileID: 5325979006650631804}
   m_Layer: 0
-  m_Name: Landnegative
+  m_Name: BigBlueOcean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5325979006650631804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325979006650631803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rbToAttract: {fileID: 722842870835571239}
-  tinyPlanet: {fileID: 6526516705080543809}
-  MassOfTinyPlanet: 100000
-  gravity: 30
 --- !u!64 &5325979006650631805
 MeshCollider:
   m_ObjectHideFlags: 0

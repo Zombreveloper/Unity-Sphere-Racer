@@ -1091,6 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280387276}
   - component: {fileID: 1280387275}
+  - component: {fileID: 1280387277}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -1112,6 +1113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCar: {fileID: 3324231259908134243}
   startPoint: {fileID: 1362576887}
+  _loadCar: {fileID: 0}
   checkPointMesh: {fileID: 2540212834985440512}
   nameOfActive: 0
 --- !u!4 &1280387276
@@ -1128,6 +1130,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280387277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280387274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c2cfd9add3a324faea832ab74d5da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 7605830009847847884, guid: b2993f1035aa92f4c8ad6f2cc8e9296b, type: 3}
+  - {fileID: 5212389541009600002, guid: 182c5d029379c0544a1e03a2ee2ecd23, type: 3}
+  - {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
+  - {fileID: 0}
+  carClone: {fileID: 0}
 --- !u!1 &1362576886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0665d0281fc252b49b1ccc4311ac80a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPrefabs: []
+  spawnPoint: {fileID: 0}
 --- !u!4 &1473958429
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,9 +1880,8 @@ GameObject:
   - component: {fileID: 2144854659}
   - component: {fileID: 2144854658}
   - component: {fileID: 2144854657}
-  - component: {fileID: 2144854656}
   m_Layer: 0
-  m_Name: Moon
+  m_Name: Mond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1880,22 +1901,6 @@ Transform:
   m_Father: {fileID: 1768239535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2144854656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144854654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rbToAttract: {fileID: 2695925663547953114}
-  tinyPlanet: {fileID: 2144854655}
-  MassOfTinyPlanet: 100000
-  gravity: 30
 --- !u!64 &2144854657
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2078,7 +2083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &2695925663547953114
 Rigidbody:
   m_ObjectHideFlags: 0

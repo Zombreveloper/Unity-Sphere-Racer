@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 8889245314218429370}
   - component: {fileID: 1114533072526725004}
   - component: {fileID: 8889245314218429371}
+  - component: {fileID: 9092887142461809152}
   m_Layer: 8
   m_Name: panda_car
   m_TagString: Untagged
@@ -274,6 +275,20 @@ MonoBehaviour:
   centerOfMass: {fileID: 8889245315528122925}
   motorTorque: 500
   maxSteer: 20
+--- !u!114 &9092887142461809152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8889245314218429372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575d13fcf85674244bb858b30378d673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassOfTinyPlanet: 100000
+  gravity: 30
 --- !u!1 &8889245314322694324
 GameObject:
   m_ObjectHideFlags: 0

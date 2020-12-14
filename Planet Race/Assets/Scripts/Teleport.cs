@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-	public Transform teleportTarget; //Teleport Position
-	public GameObject thePlayer; //Spieler, der teleportiert wird
+	public Transform teleportTarget; //Teleport Position wo man hinteleportiert
+	private GameObject thePlayer; //Spieler, der teleportiert wird
 
     void OnTriggerEnter(Collider other)
     {
-        thePlayer.transform.position = teleportTarget.transform.position;
-    }
-    
-	// Start is called before the first frame update
-    void Start()
-    {
-        
+        thePlayer = GameObject.Find(other.transform.root.name);
+		//Debug.Log(thePlayer);
+		teleport();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void teleport()
+	{
+		thePlayer.transform.position = teleportTarget.transform.position;
+	}
 }
