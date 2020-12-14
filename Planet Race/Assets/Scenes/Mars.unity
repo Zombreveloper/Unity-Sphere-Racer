@@ -2810,7 +2810,7 @@ MonoBehaviour:
   - {fileID: 7605830009847847884, guid: b2993f1035aa92f4c8ad6f2cc8e9296b, type: 3}
   - {fileID: 5212389541009600002, guid: 182c5d029379c0544a1e03a2ee2ecd23, type: 3}
   - {fileID: 8889245314218429372, guid: e97b49fedd412764fb678de8edb462a8, type: 3}
-  - {fileID: 0}
+  - {fileID: 6871198485415582892, guid: cb08a8f34937cdd4da71dfc187dfa5d6, type: 3}
   carClone: {fileID: 0}
 --- !u!1 &1839063873
 GameObject:
