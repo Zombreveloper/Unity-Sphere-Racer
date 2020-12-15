@@ -23,6 +23,13 @@ public class RaceManager : MonoBehaviour
 
     private float startingTime;
     private float endingTime;
+    private float totalTime;
+
+    public bool countsLaps { get; set;}
+    private int lapCounter = 0;
+    public int totalLaps = 2;
+
+
 
 //hauptprogramm
     void Awake()
@@ -100,6 +107,7 @@ public class RaceManager : MonoBehaviour
             //Debug.Log("numberOfActive = " + numberOfActive);
             if (nameOfActive == numberOfActive)
             {
+                updateLaps();
                 if (numberOfActive == numberOfCheckPoints-1)
                 {
                     numberOfResetPos = numberOfActive;
@@ -153,5 +161,30 @@ public class RaceManager : MonoBehaviour
         }
 
         //Debug.Log("Reset the Car NOW!!!");
+    }
+
+    void updateLaps()
+    {
+        if (countsLaps) //If the car collides wit a finish-line then...
+        {
+            lapCounter++; //..the car is now in the next Lap.
+            Debug.Log("You are in Lap Number " + lapCounter);
+            countsLaps = false;
+        }
+
+        if (lapCounter == totalLaps+1)
+        {
+            gameEnd();
+            Debug.Log("You WON!");
+        }
+    }
+
+    void gameEnd()
+    {
+        endingTime = Time.time;
+        totalTime = endingTime - startingTime;
+
+        //schriftzug
+        //ins Menu zurück
     }
 }

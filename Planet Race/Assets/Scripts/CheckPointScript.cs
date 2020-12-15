@@ -7,6 +7,7 @@ public class CheckPointScript : MonoBehaviour
     public Transform RaceManager;
     private RaceManager _manager;
     private string myName;
+    public bool i_am_finish_line;
 
     void Awake()
     {
@@ -20,5 +21,6 @@ public class CheckPointScript : MonoBehaviour
 
         _manager.triggerStatus = true;
         _manager.nameOfActive = int.Parse(myName);
+        _manager.countsLaps = i_am_finish_line;
     }
 }

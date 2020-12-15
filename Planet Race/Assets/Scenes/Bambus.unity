@@ -921,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 1
 --- !u!1001 &216026098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,6 +1337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &283770317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1616,6 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &350320739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1822,6 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &384250589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1954,6 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &420705432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2785,6 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &492392063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3489,6 +3495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &745967863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3938,6 +3945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &842806816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4070,6 +4078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &845245822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5973,6 +5982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1218517207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6549,6 +6559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1329725170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7321,6 +7332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1398973547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7675,6 +7687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1457996892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7746,6 +7759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!1 &1515043463
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,6 +7805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1515043466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9151,6 +9166,7 @@ MonoBehaviour:
   _loadCar: {fileID: 0}
   checkPointMesh: {fileID: 581512022}
   nameOfActive: 0
+  totalLaps: 2
 --- !u!4 &1791589979
 Transform:
   m_ObjectHideFlags: 0
@@ -9302,6 +9318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &1800279816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11338,6 +11355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RaceManager: {fileID: 1791589979}
+  i_am_finish_line: 0
 --- !u!65 &2135416338
 BoxCollider:
   m_ObjectHideFlags: 0
