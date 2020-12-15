@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaceManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class RaceManager : MonoBehaviour
     private int lapCounter = 0;
     public int totalLaps = 2;
 
-
+    public GameObject endeText;
 
 //hauptprogramm
     void Awake()
@@ -37,6 +38,7 @@ public class RaceManager : MonoBehaviour
         setupCheckPoints();
         checkPointLayer = LayerMask.NameToLayer("CheckPoint");
         planetImOn = PlayerPrefs.GetString("selectedPlanet");
+        //endeText = gameObject.Find(endText);
     }
 
     void Start()
@@ -95,6 +97,7 @@ public class RaceManager : MonoBehaviour
 
         //Nach GO! startzeit nehmen
         startingTime = Time.time;
+        endeText.SetActive(false);
 
         //Startet anschliessend Musik
     }
@@ -175,7 +178,7 @@ public class RaceManager : MonoBehaviour
         if (lapCounter == totalLaps+1)
         {
             gameEnd();
-            Debug.Log("You WON!");
+            //Debug.Log("You WON!");
         }
     }
 
@@ -185,6 +188,15 @@ public class RaceManager : MonoBehaviour
         totalTime = endingTime - startingTime;
 
         //schriftzug
+        endeText.SetActive(true);
+
+        Invoke("goMenu", 5 );
+
         //ins Menu zurück
+    }
+
+    void goMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
