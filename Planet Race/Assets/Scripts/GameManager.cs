@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public InputController InputController { get; private set; }
 
-    public GameObject[] carPrefabs;
-    public Transform spawnPoint;
-
     void Awake()
     {
         Instance = this;
@@ -19,13 +16,10 @@ public class GameManager : MonoBehaviour
         // nur ein (1) GameManager möglich zu verbinde -> Listener-Pattern?!
         InputController = GetComponentInChildren<InputController>();
     }
-/*
-    //Prüfen ob das so richtig ist (Suche: unity instaciate)
-    void LoadCar()
+
+    void Update()
     {
-        string selectedCar = PlayerPrefs.GetString("selectedCar");
-        GameObject prefab = carPrefabs[selectedCar];
-        GameObject clonedPrefab = Instantiate(prefab);
+
     }
-*/
+
 }

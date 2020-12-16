@@ -14,13 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSceneTest.unity
     guid: cb145ade5f79293498ce001e70e67162
-  - enabled: 1
-    path: Assets/Scenes/Mond.unity
-    guid: 271e1f0a0e1614046a2f5e41f855a8de
-  - enabled: 1
-    path: Assets/Scenes/BigBlueOcean.unity
-    guid: 217a8698800f57246ac9d064eaee2e09
-  - enabled: 1
-    path: Assets/Scenes/Bambus.unity
-    guid: 5114bf46c3481de499524834086066e0
   m_configObjects: {}
