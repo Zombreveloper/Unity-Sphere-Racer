@@ -142,7 +142,8 @@ public class RaceManager : MonoBehaviour
     {
         playerCarRB.velocity = Vector3.zero; //geschwindigkeit auf 0 setzen
         Transform posOfPoint = parentOfCheckPoints.transform.GetChild (numberOfResetPos); //transform des letzten checkpoints holen
-        playerCar.transform.position = posOfPoint.position + new Vector3(0,4,0);
+        playerCar.transform.position = posOfPoint.position; /* + new Vector3(0,4,0); sollt immer \
+        oben relativ zu planet, ist aber oben relativ zu koordinatensystem*/
         //nich += denn es soll insgesamt auch bei mehrmaligem drücken nur eimal (1) 3 aud die höhe addiert werden
 
         //weil die CheckPoints alle in unterschiedliche Richtungen gucken... unterschiedliche rotation am ziel
