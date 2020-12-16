@@ -11,7 +11,7 @@ public class TinyPlanetGravitation : MonoBehaviour
     private Transform tinyPlanet;
     public float MassOfTinyPlanet = 100000f;
 
-    Vector3 directionOfGravity;
+    public Vector3 directionOfGravity { get; private set; }
     public float gravity = 30f;
     private float forceOfGravity;
     private float distance;

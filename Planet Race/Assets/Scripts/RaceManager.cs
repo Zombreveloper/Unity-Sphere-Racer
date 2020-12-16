@@ -9,6 +9,8 @@ public class RaceManager : MonoBehaviour
     private Rigidbody playerCarRB;
     public Transform startPoint; //leres Object mit korrektem Transform für startendes Auto
 
+    public TinyPlanetGravitation myPlanet; //Gravitationsberechnung für vector und positions zeug
+
     private string planetImOn;
 
     public LoadCar _loadCar;
@@ -47,7 +49,8 @@ public class RaceManager : MonoBehaviour
         triggerStatus = false;
 
         playerCar = GameObject.Find("currentCar");
-        playerCarRB =playerCar.GetComponent<Rigidbody>();
+        playerCarRB = playerCar.GetComponent<Rigidbody>();
+        myPlanet = playerCar.GetComponent<TinyPlanetGravitation>(); //tinyplanet vom car getten
     }
 
     void Update()
@@ -142,9 +145,14 @@ public class RaceManager : MonoBehaviour
     {
         playerCarRB.velocity = Vector3.zero; //geschwindigkeit auf 0 setzen
         Transform posOfPoint = parentOfCheckPoints.transform.GetChild (numberOfResetPos); //transform des letzten checkpoints holen
-        playerCar.transform.position = posOfPoint.position; /* + new Vector3(0,4,0); sollt immer \
+
+        /*playerCar.transform.position = posOfPoint.position;  + new Vector3(0,4,0); sollt immer \
         oben relativ zu planet, ist aber oben relativ zu koordinatensystem*/
         //nich += denn es soll insgesamt auch bei mehrmaligem drücken nur eimal (1) 3 aud die höhe addiert werden
+
+        Vector3 upDirection = myPlanet.directionOfGravity;
+        playerCar.transform.position = posOfPoint.position + Vector3.Normalize(upDirection)*-3;
+        //auto landet an Position des Checkpoints, aber erhöht um 3 entlang der Achse zwischen Planetkern und Auto
 
         //weil die CheckPoints alle in unterschiedliche Richtungen gucken... unterschiedliche rotation am ziel
         if (planetImOn == "Mars")
