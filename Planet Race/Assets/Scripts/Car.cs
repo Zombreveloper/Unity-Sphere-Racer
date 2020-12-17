@@ -11,8 +11,13 @@ public class Car : MonoBehaviour
     public float Steer { get; set; }
     public float Throttle { get; set; }
 
-    private Rigidbody _rigidbody;
+	private Rigidbody _rigidbody;
     private Wheel[] wheels; //Array aus reifen
+	
+	void awake()
+	{
+		
+	}
 
     void Start()
     {
@@ -32,4 +37,26 @@ public class Car : MonoBehaviour
             wheel.Torque = Throttle * motorTorque;
         }
     }
+	
+	public float LocalSpeed()
+	{
+		var veryLocalRigid = new Rigidbody(); //Ich glaube diese Zeile muss komplett wieder weg? Und die da drüber...
+		veryLocalRigid = _rigidbody;
+		//if (canMove)
+		{
+			float dot = Vector3.Dot(transform.forward, veryLocalRigid.velocity);
+			if (Mathf.Abs(dot) > 0.1f)
+			{
+				float speed = _rigidbody.velocity.magnitude;
+				return speed;
+			}
+			//return 0f;
+		}
+		/*else
+		{
+			// use this value to play kart sound when it is waiting the race start countdown.
+			return Input.y;
+		} */
+		return 0f;
+	}
 }
