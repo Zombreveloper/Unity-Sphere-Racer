@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
         }*/
 
         //VERSION 2
-        SceneManager.LoadScene("GameSceneTest");
+        //SceneManager.LoadScene("GameSceneTest");
 
         //VERSION 3
         Debug.Log("Menu Planet: " + PlayerPrefs.GetString("selectedPlanet"));
