@@ -195,6 +195,7 @@ public class RaceManager : MonoBehaviour
     {
         endingTime = Time.time;
         totalTime = endingTime - startingTime;
+        PlayerPrefs.SetFloat("totalTime", totalTime);
 
         //schriftzug
         endeText.SetActive(true);
@@ -206,6 +207,6 @@ public class RaceManager : MonoBehaviour
 
     void goMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Players Score");
     }
 }
